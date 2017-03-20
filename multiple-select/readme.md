@@ -26,7 +26,7 @@
 - **js文件：**
     - `<script src="http://code.jquery.com/jquery-2.2.0.js"></script>`  
     - `<script src="./multiple-select.js"></script>`  
-    ** 备注：jQuery >= 1.7.0版本，且在multiple-select.js之前引用。css和js文件请从本git上下载。  **
+    **备注：jQuery >= 1.7.0版本，且在multiple-select.js之前引用。css和js文件请从本git上下载。**
 
 ### 2、Html如下：
     <select multiple="multiple">

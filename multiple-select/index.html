@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>multiple-select</title>
+  <link href="./multiple-select.css" rel="stylesheet"/>;
+  <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+  <script src="./multiple-select.js"></script>
+</head>
+<body>
+  <select multiple="multiple">
+    <optgroup label="组别1">
+        <option value="1_1">选项1_1</option>
+        <option value="1_2">选项1_2</option>
+		<option value="1_3">选项1_3</option>
+		<option value="1_4">选项1_4</option>
+		<option value="1_5">选项1_5</option>
+    </optgroup>
+	<optgroup label="组别2">
+        <option value="2_1">选项2_1</option>
+        <option value="2_2">选项2_2</option>
+		<option value="2_3">选项2_3</option>
+		<option value="2_4">选项2_4</option>
+		<option value="2_5">选项2_5</option>
+    </optgroup>
+  </select>
+  <script>
+    $('select').multipleSelect({ 
+		placeholder: '请选择',
+		selectAllDelimiter: ['', ''],
+		multiple: true,
+		multipleWidth: 144,
+		filter: true,
+		width: 460,
+		delimiter: ', ',
+		selectAllText: "<span style='font-weight:bold;'>全选</span>",
+		allSelected: '全部选中',
+		countSelected: '#/% 被选中',
+		noMatchesFound: '无匹配项',
+
+		styler: function () {
+			return 'color: #333;';
+		}
+
+	});
+  </script>
+</body>
+</html>

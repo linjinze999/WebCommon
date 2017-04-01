@@ -178,26 +178,26 @@
 
 ***
 
-###（二）、事件
-####1.onOpen:  
+### （二）、事件
+#### 1.onOpen:  
 >下拉框打开时的事件。
 
-####2.onClose:
+#### 2.onClose:
 >下拉框关闭时的事件。
 
-####3.onCheckAll:
+#### 3.onCheckAll:
 >全部选中后的事件。
 
-####4.onUncheckAll:
+#### 4.onUncheckAll:
 >全部不选的事件。
 
-####5.onFocus:
+#### 5.onFocus:
 >获得焦点时的事件。
 
-####6.onBlur:
+#### 6.onBlur:
 >失去焦点的事件。
 
-####7.onOptgroupClick:
+#### 7.onOptgroupClick:
 1. 组别（optgroup）被点击后的事件。
 2. 参数：
 
@@ -210,7 +210,7 @@
         }
 
 
-####8.onClick:
+#### 8.onClick:
 1. 一个选项被点击后的事件。
 2. 参数：
 
@@ -224,49 +224,49 @@
 
 ***
 
-###（三）、方法
-####1.getSelects:
+### （三）、方法
+#### 1.getSelects:
 >- 获取所有被选中的值。参数：string。默认获取value，如果加上text参数，则获取文本。
 - 举例： 
   - `$('select').multipleSelect('getSelects');`
   - `$('select').multipleSelect('getSelects','text')`
 
-####2.setSelects:
+#### 2.setSelects:
 >- 设置某些值被选中。参数：array。
 - 举例：
     -  `$('select').multipleSelect('setSelects', [1, 3]);`
 
-####3.enable:
+#### 3.enable:
 >- 允许修改选择。
 - 举例：
     - `$('select').multipleSelect('enable');`
 
-####4.disable:
+#### 4.disable:
 >- 不允许修改选择。
 - 举例：
     -  `$('select').multipleSelect('disable');`
 
-####5.checkAll:
+#### 5.checkAll:
 >- 选中所有选项。
 -  举例：
     -   `$('select').multipleSelect('checkAll');`
 
-####6.uncheckAll:
+#### 6.uncheckAll:
 >- 全部取消选择。 
 - 举例：
     -  `$('select').multipleSelect('uncheckAll');`
 
-####7.focus:
+#### 7.focus:
 >- 使下拉框获得焦点。  
 - 举例：
     -  `$('select').multipleSelect('focus');`
 
-####8.blur:
+#### 8.blur:
 >- 使下拉框失去焦点。  
 - 举例：
     -  `$('select').multipleSelect('blur');`
 
-####9.refresh:
+#### 9.refresh:
 >- 重新加载下拉框，当你修改了DOM树的时候可使用本方法重新加载。  
 - 举例：
     -  `$('select').multipleSelect('refresh');`

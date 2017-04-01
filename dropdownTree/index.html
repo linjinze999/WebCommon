@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>dropdownTree</TITLE>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="./zTree_v3-master/css/metroStyle/metroStyle.css">
+		<link rel="stylesheet" href="./dropdownTree.css">
+		<script src="./zTree_v3-master/js/jquery-1.4.4.min.js"></script>
+		<script src="./zTree_v3-master/js/jquery.ztree.core.js"></script>
+		<script src="./zTree_v3-master/js/jquery.ztree.excheck.js"></script>
+		<script src="./zTree_v3-master/js/jquery.ztree.exhide.min.js"></script>
+		<script src="./dropdownTree.js"></script>
+		
+		<style type="text/css">
+			#demo{height:26px;width:250px;}
+		</style>
+	</HEAD>
+
+	<BODY>
+		<input id="demo" type="text"/>
+		<script>
+			$("#demo").dropdownTree({
+				checkType:"checkbox",
+				data:[
+					{id:1, pId:0, name:"北京"},
+					{id:2, pId:0, name:"天津"},
+					{id:3, pId:0, name:"上海"},
+					{id:7, pId:0, name:"重庆"},
+					{id:4, pId:0, name:"河北省", open:true},
+					{id:41, pId:4, name:"石家庄"},
+					{id:42, pId:4, name:"保定"},
+					{id:43, pId:4, name:"邯郸"},
+					{id:44, pId:4, name:"承德"},
+					{id:5, pId:0, name:"广东省", open:true},
+					{id:51, pId:5, name:"广东"},
+					{id:52, pId:5, name:"深圳"},
+					{id:53, pId:5, name:"东莞"},
+					{id:6, pId:0, name:"福建省", open:true},
+					{id:61, pId:6, name:"福州"},
+					{id:62, pId:6, name:"厦门"},
+					{id:63, pId:6, name:"泉州"},
+					{id:64, pId:6, name:"漳州"},
+					{id:641, pId:64, name:"漳浦"}
+				 ]
+			});
+		</script>
+	</BODY>
+</HTML>

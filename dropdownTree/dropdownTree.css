@@ -1,0 +1,89 @@
+.ddt-parent {
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.ddt-choice {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    text-align: left;
+    white-space: nowrap;
+    font-size:14px !important;
+    color: #000;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+
+}
+.ddt-choice > input{
+    padding: 0 0 0 5px !important;
+    overflow: hidden;
+    cursor: pointer !important;
+    border:0 solid rgba(0,0,0,0) !important;
+}
+
+.ddt-choice > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 25px;
+    background: url('dropdownTree.png') left top no-repeat;
+}
+
+.ddt-choice > span.open {
+    background: url('dropdownTree.png') right top no-repeat;
+}
+
+.ddt-drop {
+    display: none;
+    margin-top: -1px;
+    padding: 4px;
+    position: absolute;
+    z-index: 1000;
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	-webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+}
+
+
+.ddt-search{
+    height: 26px;
+    padding: 0 20px 0 5px;
+    margin: 0;
+    outline: 0;
+    border: 1px solid #aaa;
+    background: #fff url('dropdownTree.png') no-repeat 100% -22px;
+    background: url('dropdownTree.png') no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+    background: url('dropdownTree.png') no-repeat 100% -22px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+    background: url('dropdownTree.png') no-repeat 100% -22px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+    background: url('dropdownTree.png') no-repeat 100% -22px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+    background: url('dropdownTree.png') no-repeat 100% -22px, -ms-linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+    background: url('dropdownTree.png') no-repeat 100% -22px, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+}
+
+.ddt-checkall{
+	padding-top:4px;
+	padding-left:2px;
+	margin:0;
+}
+
+.ddt-tree{
+	margin-top:2px !important;
+	border:0 solid #fff !important;
+	background-color:#fff !important;
+	overflow:auto !important;
+}
+

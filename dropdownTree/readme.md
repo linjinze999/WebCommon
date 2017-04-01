@@ -102,11 +102,11 @@
     - placeholder：**""** | String。查询框提示文字
 3. 默认值:
 
-    {
-        show:true, 
-        showChildren:true, 
-        placeholder:""
-    }
+        {
+            show:true, 
+            showChildren:true, 
+            placeholder:""
+        }
 
 ### 6. checkType:    
 > 1. 描述：结点前是否加入选择框
@@ -114,7 +114,7 @@
     - "none"：无
     - "radio"：单选框
     - "checkbox"：多选框
-3. 默认值:**"auto"**
+3. 默认值:**"none"**
 
 ### 7. checkSet:    
 > 1. 描述：选择框的配置项

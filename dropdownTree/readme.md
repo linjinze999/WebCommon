@@ -126,6 +126,7 @@
         - radioType：**"all"** | "level"。单选范围（all:整棵树；level：自己组别）
     - "checkbox"：
         - parentCheck：**true** | false。父结点是否可选
+        - parentValue：true | **false**。是否取父节点的值
         - relateChildren：**true** | false。选中状态是否关联子结点
         - showCheckAll：**true** | false。显示“全选”
         - checkAllHtml:**"全选"** | String。“全选”文本，支持html

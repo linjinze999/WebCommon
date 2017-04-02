@@ -167,7 +167,16 @@
 			}
 			var ids="",vs = "";
 			nodes.sort(function compare(a,b){return a[_idKey]-b[_idKey];});
+			var _parentValue = true;
+			if(that.options.checkType == "checkbox" && !that.options.checkSet.checkbox.parentValue){
+				_parentValue = false;
+			}
 			for (var i=0; i<nodes.length; i++) {
+				if(nodes[i].isParent){
+					if(!_parentValue ){
+						continue;
+					}
+				}
 				vs += nodes[i].name + ",";
 				ids += nodes[i][_idKey] + ",";
 			}
@@ -176,7 +185,7 @@
 				vs = vs.substring(0, vs.length-1);
 			} 
 			that.objValue = ids;
-			that.obj.attr("value", ids);
+			that.obj.attr("value", ids).trigger("blur");
 			$("#"+that.replaceInputName).attr("value", vs);
 		},
 		/*----------手动设置值----------*/
@@ -335,6 +344,7 @@
 			},
 			"checkbox":{
 				parentCheck:true,
+				parentValue:false,		//是否取父节点的值
 				relateChildren:true,	//选中状态是否关联子结点
 				showCheckAll:true,		//显示“全选”
 				checkAllHtml:"全选",	//“全选”文本，支持html

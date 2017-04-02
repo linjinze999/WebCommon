@@ -142,7 +142,7 @@
 					'<div id="' + this.menuContentName + '" class="menuContent ddt-drop" >' + _filedSearch + _checkAll +
 			        '<ul id="' + this.treeDemoName + '" class="ztree ddt-tree" style="width:' + (_width.split("p")[0]-20) + 'px; height: ' + _options.menuHeight + ';"></ul></div></div>';
 			$(_dropdownTreeHtml).appendTo(_obj.parent());
-			var _offset = _obj.offset();
+			var _offset = _obj.position();
 			$("#"+this.menuParentName).css({left:_offset.left + "px", top:_offset.top + "px"});
 			//bind
 			$("#"+this.replaceChoiceName).bind("click",this.showMenu);

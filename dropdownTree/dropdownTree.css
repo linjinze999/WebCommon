@@ -21,11 +21,11 @@
     background-color: #fff;
 
 }
-.ddt-choice > input{
-    padding: 0 0 0 5px !important;
-    overflow: hidden;
-    cursor: pointer !important;
-    border:0 solid rgba(0,0,0,0) !important;
+.ddt-show-value{
+    padding-left:5px !important;
+	display:inline-block;
+	overflow:hidden;
+	color:#888;
 }
 
 .ddt-choice > span {
@@ -87,3 +87,7 @@
 	overflow:auto !important;
 }
 
+.ddt-tip{
+	text-align:center;
+	color:red;
+}

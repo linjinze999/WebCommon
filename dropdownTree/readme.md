@@ -66,6 +66,59 @@
 
 ## 三、文档  
 配置项如下：  
+
+    {
+		width:"auto",
+		menuHeight:"300px",
+		height:"auto",
+		placeholder:'请选择',
+	    filedSearch:{
+			show:true,
+			showChildren:true,
+			placeholder:'',
+			noResult:'找不到结果',
+		},
+		valueShow:{
+			type:"string",
+			stringShow:{
+				max:3,
+				text:"#/% 被选中"
+			},
+		},
+	    checkType:"none",
+		checkSet:{
+			"none":{
+				parentCheck:false,
+			},
+			"radio":{
+				parentCheck:false,
+				radioType:"all",
+			},
+			"checkbox":{
+				parentCheck:true,
+				parentValue:false,
+				relateChildren:true,
+				showCheckAll:true,
+				checkAllHtml:"全选",
+				maxCheck:false,
+			}
+		},
+	    zTree:{
+	    	view: {
+				dblClickExpand: false
+			},
+			data: {
+				simpleData: {
+					enable: true,
+					idKey : "id",
+				    pIdKey : "pId",
+				}
+			},
+			callback:{},
+	    },
+		data:[]
+	}
+
 ### 1. width:  
 > 1. 描述：整个下拉框树的宽度
 2. 可选值：
@@ -80,8 +133,8 @@
     - String：自定义，只支持px
 3. 默认值:**"300px"**
 
-### 3. inputHeight:    
-> 1. 描述：整个下拉框树的宽度
+### 3. height:    
+> 1. 描述：输入框的宽度
 2. 可选值：
     - "auto"：和原输入框一致；
     - "default"：默认26px；
@@ -100,15 +153,35 @@
     - show：**true** | false。是否显示查询框
     - showChildren：**true** | false。查找到结点时如果该结点有子结点，是否显示子结点
     - placeholder：**""** | String。查询框提示文字
+    - noResult：**'找不到结果'** | String。“找不到结果”文本
 3. 默认值:
 
         {
             show:true, 
             showChildren:true, 
-            placeholder:""
+            placeholder:"",
+            noResult:'找不到结果'
         }
 
-### 6. checkType:    
+### 6.valueShow:
+>1. 描述：值显示样式
+>2. 子配置项：
+    - type："string" | "hidden" | "ellipsis"。string表示用以下文本取代值；hidden表示超出部分隐藏；ellipsis表示超出部分用“…”取代。
+    - stringShow:
+        - max：**3** | false | number。超过n个值被选中后用下面的text取代值显示；false表示不管选择多少个都被取代。默认前三个值正常显示。
+        - text：**"#/% 被选中"** | string。取代文本。%表示总数量，#表示目前选中数量。
+>3. 默认值：
+
+    {
+		type:"string",
+		stringShow:{
+			max:3,
+			text:"#/% 被选中"
+		}
+	}
+		
+
+### 7. checkType:    
 > 1. 描述：结点前是否加入选择框
 2. 可选值：
     - "none"：无
@@ -116,7 +189,7 @@
     - "checkbox"：多选框
 3. 默认值:**"none"**
 
-### 7. checkSet:    
+### 8. checkSet:    
 > 1. 描述：选择框的配置项
 2. 子配置项：
     - "none"：
@@ -130,6 +203,7 @@
         - relateChildren：**true** | false。选中状态是否关联子结点
         - showCheckAll：**true** | false。显示“全选”
         - checkAllHtml:**"全选"** | String。“全选”文本，支持html
+        - maxCheck：**false** | number。最多选择个数。false表示不限制。
 3. 默认值:
 
 		{
@@ -145,6 +219,7 @@
 				relateChildren:true,
 				showCheckAll:true,
 				checkAllHtml:"全选",
+                maxCheck:false,
 			}
 		}
 

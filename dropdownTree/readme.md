@@ -137,7 +137,7 @@
 > 1. 描述：输入框的宽度
 2. 可选值：
     - "auto"：和原输入框一致；
-    - "default"：默认26px；
+    - "default"：默认25px；
     - String：自定义，只支持px
 3. 默认值:**"auto"**
 
@@ -223,7 +223,7 @@
 			}
 		}
 
-### 8. zTree:    
+### 9. zTree:    
 > 1. 描述：zTree的配置项
 2. 配置：参考[官网zTree配置](http://www.treejs.cn/v3/api.php)
 3. 默认值:
@@ -241,7 +241,7 @@
 			callback:{}
 	    },
 
-### 9. data:
+### 10. data:
 > 1. 描述：zTree的数据
 2. 配置：参考 [官网zTree标准JSON数据](http://www.treejs.cn/v3/demo.php#_101) 或者 [官网zTree简单JSON数据](http://www.treejs.cn/v3/demo.php#_102)
 3. 默认值:**[]**

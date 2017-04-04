@@ -251,7 +251,6 @@
 			var _idKey = that.options.zTree.data.simpleData.idKey;
 			//新旧值不一样时触发
 			if(that.objValue != values){
-				that.objValue = values;
 				//得到新值
 				var ids={};
 				var _ids = values.split(",");
@@ -277,6 +276,13 @@
 						$("#"+that.replaceInputName).text(that.options.placeholder);
 					}
 				}else{//radio checkbox 选择框
+					//最大选择数量限制
+					var _maxNum = that.options.checkSet["checkbox"].maxCheck;
+					if(that.options.checkType=="checkbox" && !!_maxNum && (showNodes.length>_maxNum)){
+						$("#"+that.tipName).html("最多选择"+_maxNum+"个");
+						return;
+					}
+					//正常显示
 					zTree.checkAllNodes(false);
 					var v=[];
 					for(var i in showNodes){
@@ -307,6 +313,7 @@
 					}
 					
 				}
+				that.objValue = values;
 			}
 		},
 		/*----------查询----------*/

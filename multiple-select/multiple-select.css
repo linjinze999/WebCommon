@@ -12,14 +12,14 @@
 .ms-choice {
     display: block;
     width: 100%;
-    height: 26px;
+    height: 34x;
     padding: 0;
     overflow: hidden;
     cursor: pointer;
-    border: 1px solid #aaa;
+    border: 1px solid #ccc;
     text-align: left;
     white-space: nowrap;
-    line-height: 26px;
+    line-height: 34px;
     font-family:'Helvetica','Glyphicons Halflings','Arial' !important;
     font-size:14px !important;
     color: #000;
@@ -28,7 +28,7 @@
     -moz-border-radius: 4px;
     border-radius: 4px;
     background-color: #fff;
-
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 }
 
 .ms-choice.disabled {
